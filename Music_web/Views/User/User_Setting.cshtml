@@ -1,0 +1,57 @@
+﻿@model Music_web.Models.User
+
+@{
+    ViewData["Title"] = "User_Setting";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var user = ViewData["User"] as User;
+}
+
+    <div style="width:100%;height:300px;background-image:url('/img/xinkong.jpg')">
+        <img src="@user.User_image" height="100px" width="100px" class="rounded-circle" style="float:left;margin-left:45%;margin-top:80px" />
+        <p style="color:white;position:absolute;float:left;margin-left:45%;margin-top:190px"><font size="+3">@user.User_name</font></p>
+        <div style="color:white;position:absolute;float:left;margin-top:260px;font-size:22px;margin-left:2%">
+            <span><a href="/User/My_Music" style="color:white">我的收藏</a> &nbsp;</span>
+            <span><a href="/User/User_Setting" style="color:white">用户信息</a> &nbsp; </span>
+            <span><a href="/User/Update_music" style="color:white">上传音乐</a> &nbsp; </span>
+            <span>专辑  </span>
+        </div>
+    </div>
+<h4 style="font-family:楷体;margin-left:2%;margin-top:5px">用户信息修改：</h4>
+<hr />
+<div class="container">
+    <div class="row">
+        <div class="col-md-5" style="position:absolute">
+            <form asp-action="User_Setting" enctype="multipart/form-data">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="UserId" />
+                <div>
+                    <label asp-for="User_name" class="control-label"></label>
+                    <input asp-for="User_name" class="form-control" value="@user.User_name" />
+                    <span asp-validation-for="User_name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="User_sex" class="control-label"></label>
+                    <input asp-for="User_sex" class="form-control" value="@user.User_sex" />
+                    <span asp-validation-for="User_sex" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="User_email" class="control-label"></label>
+                    <input asp-for="User_email" class="form-control" value="@user.User_email" />
+                    <span asp-validation-for="User_email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="User_image" class="control-label"></label>
+                    <input asp-for="User_imageFile" class="form-control" type="file" multiple />
+                    <span asp-validation-for="User_image" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Save" style="background-color: #008CBA;border: none; color: white;padding: 15px 32px;text-align: center; text-decoration: none;display: inline-block;font-size: 16px; margin: 4px 2px;cursor: pointer;"/>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

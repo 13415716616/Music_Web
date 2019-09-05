@@ -1,0 +1,137 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Myclasss\**" />
+    <Content Remove="Myclasss\**" />
+    <EmbeddedResource Remove="Myclasss\**" />
+    <None Remove="Myclasss\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Music\index.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Music\index.cshtml" />
+    <None Include="wwwroot\css\font-awesome.min.css" />
+    <None Include="wwwroot\css\index.css" />
+    <None Include="wwwroot\fonts\fontawesome-webfont.eot" />
+    <None Include="wwwroot\fonts\fontawesome-webfont.svg" />
+    <None Include="wwwroot\fonts\fontawesome-webfont.ttf" />
+    <None Include="wwwroot\fonts\fontawesome-webfont.woff" />
+    <None Include="wwwroot\fonts\fontawesome-webfont.woff2" />
+    <None Include="wwwroot\fonts\FontAwesome.otf" />
+    <None Include="wwwroot\img\123.gif" />
+    <None Include="wwwroot\js\data.js" />
+    <None Include="wwwroot\js\index.js" />
+    <None Include="wwwroot\js\jquery-2.2.1.min.js" />
+    <None Include="wwwroot\js\jquery.min.js" />
+    <None Include="wwwroot\js\logindata.js" />
+    <None Include="wwwroot\js\music.js" />
+    <None Include="wwwroot\js\scroll.js" />
+    <None Include="wwwroot\js\site.js" />
+    <None Include="wwwroot\musicSrc\huayuMan\FangDatong\CanYouFeelTheMusic\can.lrc" />
+    <None Include="wwwroot\musicSrc\huayuMan\FangDatong\CanYouFeelTheMusic\can1.lrc" />
+    <None Include="wwwroot\musicSrc\huayuMan\FangDatong\fangbuguoziji\fan.lrc" />
+    <None Include="wwwroot\musicSrc\huayuMan\FangDatong\fengyezuodefengling\fen.lrc" />
+    <None Include="wwwroot\musicSrc\huayuMan\FangDatong\GoodbyeMelodyRose\goo.lrc" />
+    <None Include="wwwroot\musicSrc\huayuMan\FangDatong\heibaihui\hbh.lrc" />
+    <None Include="wwwroot\musicSrc\huayuMan\FangDatong\jiangshi\js.lrc" />
+    <None Include="wwwroot\musicSrc\huayuMan\FangDatong\Soundcheck\sou.lrc" />
+    <None Include="wwwroot\musicSrc\huayuMan\FangDatong\tebiederen\tb.lrc" />
+    <None Include="wwwroot\musicSrc\huayuMan\FangDatong\weixianshijie\wxsj.lrc" />
+    <None Include="wwwroot\musicSrc\huayuMan\FangDatong\wukong\wk.lrc" />
+    <None Include="wwwroot\musicSrc\huayuMan\LiJian\chengshizhiguang\cszg.lrc" />
+    <None Include="wwwroot\musicSrc\huayuMan\LiJian\chuanqi\cq.lrc" />
+    <None Include="wwwroot\musicSrc\huayuMan\LiJian\fengchuimailang\fcml.lrc" />
+    <None Include="wwwroot\musicSrc\huayuMan\LiJian\jiaruaiyou\jr.lrc" />
+    <None Include="wwwroot\musicSrc\huayuMan\LiJian\songhuajiang\shj.lrc" />
+    <None Include="wwwroot\musicSrc\huayuMan\LiJian\sumuzhe\smz.lrc" />
+    <None Include="wwwroot\musicSrc\huayuMan\LiJian\woyuan\wy.lrc" />
+    <None Include="wwwroot\musicSrc\huayuMan\LiJian\yixiangren\yxr.lrc" />
+    <None Include="wwwroot\musicSrc\huayuMan\LiJian\zhanfang\zf.lrc" />
+    <None Include="wwwroot\musicSrc\huayuMan\LiJian\ziluolan\zll.lrc" />
+    <None Include="wwwroot\musicSrc\huayuMan\LinJunjie\aixiaodeyanjing\ax.lrc" />
+    <None Include="wwwroot\musicSrc\huayuMan\LinJunjie\beiduibeiyongbao\bdb.lrc" />
+    <None Include="wwwroot\musicSrc\huayuMan\LinJunjie\buchaobuhuaqian\bcb.lrc" />
+    <None Include="wwwroot\musicSrc\huayuMan\LinJunjie\caocao\cc.lrc" />
+    <None Include="wwwroot\musicSrc\huayuMan\LinJunjie\jiangnan\jn.lrc" />
+    <None Include="wwwroot\musicSrc\huayuMan\LinJunjie\meirenyu\mry.lrc" />
+    <None Include="wwwroot\musicSrc\huayuMan\LinJunjie\tashuo\ts.lrc" />
+    <None Include="wwwroot\musicSrc\huayuMan\LinJunjie\wohaixiangta\whxt.lrc" />
+    <None Include="wwwroot\musicSrc\huayuMan\LinJunjie\yiqiannianyihou\yqn.lrc" />
+    <None Include="wwwroot\musicSrc\huayuMan\LinJunjie\zuichibi\zcb.lrc" />
+    <None Include="wwwroot\musicSrc\huayuMan\XueZhiqian\aimei\am.lrc" />
+    <None Include="wwwroot\musicSrc\huayuMan\XueZhiqian\choubaguai\cbg.lrc" />
+    <None Include="wwwroot\musicSrc\huayuMan\XueZhiqian\dongwushijie\dwsj.lrc" />
+    <None Include="wwwroot\musicSrc\huayuMan\XueZhiqian\gangganghao\ggh.lrc" />
+    <None Include="wwwroot\musicSrc\huayuMan\XueZhiqian\gaoshang\gs.lrc" />
+    <None Include="wwwroot\musicSrc\huayuMan\XueZhiqian\huli\hl.lrc" />
+    <None Include="wwwroot\musicSrc\huayuMan\XueZhiqian\luotuo\lt.lrc" />
+    <None Include="wwwroot\musicSrc\huayuMan\XueZhiqian\nihaiyaowozenyang\nhy.lrc" />
+    <None Include="wwwroot\musicSrc\huayuMan\XueZhiqian\wohaipa\whp.lrc" />
+    <None Include="wwwroot\musicSrc\huayuMan\XueZhiqian\yanyuan\yy.lrc" />
+    <None Include="wwwroot\musicSrc\huayuMan\ZhouJielun\dongfengpo\do.lrc" />
+    <None Include="wwwroot\musicSrc\huayuMan\ZhouJielun\huahai\hu.lrc" />
+    <None Include="wwwroot\musicSrc\huayuMan\ZhouJielun\huidaoguoqu\co.lrc" />
+    <None Include="wwwroot\musicSrc\huayuMan\ZhouJielun\huohuohuo\huo.lrc" />
+    <None Include="wwwroot\musicSrc\huayuMan\ZhouJielun\jiandanai\ji.lrc" />
+    <None Include="wwwroot\musicSrc\huayuMan\ZhouJielun\pugongying\pu.lrc" />
+    <None Include="wwwroot\musicSrc\huayuWom\DengZiqi\guangnian\gn.lrc" />
+    <None Include="wwwroot\musicSrc\huayuWom\DengZiqi\houhuiwuqi\hhwq.lrc" />
+    <None Include="wwwroot\musicSrc\huayuWom\DengZiqi\paomo\pm.lrc" />
+    <None Include="wwwroot\musicSrc\huayuWom\DengZiqi\taohuanuo\thn.lrc" />
+    <None Include="wwwroot\musicSrc\huayuWom\DengZiqi\woyao\wy.lrc" />
+    <None Include="wwwroot\musicSrc\huayuWom\DengZiqi\xiebuwan\xbw.lrc" />
+    <None Include="wwwroot\musicSrc\huayuWom\DengZiqi\xihuanni\xhn.lrc" />
+    <None Include="wwwroot\musicSrc\huayuWom\DengZiqi\xinzhiyan\xzy.lrc" />
+    <None Include="wwwroot\musicSrc\huayuWom\DengZiqi\zaijian\zj.lrc" />
+    <None Include="wwwroot\musicSrc\huayuWom\LiuRuoying\dangai\da.lrc" />
+    <None Include="wwwroot\musicSrc\huayuWom\LiuRuoying\duibai\db.lrc" />
+    <None Include="wwwroot\musicSrc\huayuWom\LiuRuoying\haojiu\hjhj.lrc" />
+    <None Include="wwwroot\musicSrc\huayuWom\LiuRuoying\henaini\han.lrc" />
+    <None Include="wwwroot\musicSrc\huayuWom\LiuRuoying\houlai\hl.lrc" />
+    <None Include="wwwroot\musicSrc\huayuWom\LiuRuoying\huaji\hj.lrc" />
+    <None Include="wwwroot\musicSrc\huayuWom\LiuRuoying\renzhichu\rzc.lrc" />
+    <None Include="wwwroot\musicSrc\huayuWom\LiuRuoying\touming\tm.lrc" />
+    <None Include="wwwroot\musicSrc\huayuWom\LiuRuoying\weiaichikuang\wack.lrc" />
+    <None Include="wwwroot\musicSrc\huayuWom\LiuRuoying\yibeizidegudan\ybz.lrc" />
+    <None Include="wwwroot\musicSrc\huayuZuhe\WuYuetian\bierewo\brw.lrc" />
+    <None Include="wwwroot\musicSrc\huayuZuhe\WuYuetian\caihong\ch.lrc" />
+    <None Include="wwwroot\musicSrc\huayuZuhe\WuYuetian\diyitian\dyt.lrc" />
+    <None Include="wwwroot\musicSrc\huayuZuhe\WuYuetian\erwozhidao\ewzd.lrc" />
+    <None Include="wwwroot\musicSrc\huayuZuhe\WuYuetian\juejiang\jj.lrc" />
+    <None Include="wwwroot\musicSrc\huayuZuhe\WuYuetian\lianaiing\la.lrc" />
+    <None Include="wwwroot\musicSrc\huayuZuhe\WuYuetian\shiguangji\sgj.lrc" />
+    <None Include="wwwroot\musicSrc\huayuZuhe\WuYuetian\wenrou\wr.lrc" />
+    <None Include="wwwroot\musicSrc\huayuZuhe\WuYuetian\zhiming\zm.lrc" />
+    <None Include="wwwroot\musicSrc\huayuZuhe\WuYuetian\zhizu\zz.lrc" />
+    <None Include="wwwroot\musicSrc\huayuZuhe\YuQuan\benpao\bp.lrc" />
+    <None Include="wwwroot\musicSrc\huayuZuhe\YuQuan\caihong\ch.lrc" />
+    <None Include="wwwroot\musicSrc\huayuZuhe\YuQuan\zuimei\zm.lrc" />
+    <None Include="wwwroot\musicSrc\oumei\Adele\1\ChasingPavements.lrc" />
+    <None Include="wwwroot\musicSrc\oumei\Adele\2\MakeYouFeelMyLove.lrc" />
+    <None Include="wwwroot\musicSrc\oumei\Adele\3\Hello.lrc" />
+    <None Include="wwwroot\musicSrc\oumei\Adele\4\RollingInTheDeep.lrc" />
+    <None Include="wwwroot\musicSrc\oumei\Adele\5\SetFiretotheRain.lrc" />
+    <None Include="wwwroot\musicSrc\oumei\Adele\6\SomeoneLikeYou.lrc" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Folder Include="wwwroot\Src\Userimage\" />
+  </ItemGroup>
+
+</Project>

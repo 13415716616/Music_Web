@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewData["Title"] = "My_Music";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var user = ViewBag.user as User;
+    IList<Music> songs = ViewBag.songs as List<Music>;
+    var i = 2;
+}
+
+
+<div style="width:100%;height:300px;background-image:url('/img/xinkong.jpg')">
+    <img src="@user.User_image" height="100px" width="100px" class="rounded-circle" style="float:left;margin-left:45%;margin-top:80px" />
+    <p style="color:white;position:absolute;float:left;margin-left:45%;margin-top:190px"><font size="+3">@user.User_name</font></p>
+    <div style="color:white;position:absolute;float:left;margin-top:260px;font-size:22px;margin-left:2%">
+        <span><a href="/User/My_Music" style="color:white">我的收藏</a> &nbsp;</span>
+        <span><a href="/User/User_Setting" style="color:white">用户信息</a> &nbsp; </span>
+        <span><a href="/User/Update_music" style="color:white">上传音乐</a> &nbsp; </span>
+        <span>专辑  </span>
+    </div>
+</div>
+<h4 style="font-family:楷体">&nbsp;&nbsp;我收藏的音乐</h4>
+
+@if (songs != null)
+{
+    <table class="table" style="width: 90%;margin-left:5%">
+        <thead style="size: 10ch">
+        <th>歌曲名</th>
+        <th>歌手</th>
+        <th>专辑</th>
+        @*<th>来源</th>
+            <th>收藏</th>*@
+        </thead>
+        <tbody style="opacity:0.5">
+
+            @foreach (var song in songs)
+            {
+                @if (i % 2 == 0)
+                {
+                    <tr style="background-color:#f0fcff;">
+                        <td><a href="/Music/writejson?id=@song.MusicId">@song.Music_name</a></td>
+                        <td>@song.Music_singer</td>
+                        <td><a href="album?id=@song.Music_albumid">@song.Music_specialName</a></td>
+                    </tr>
+                }
+                else
+                {
+                    <tr>
+                        <td><a href="/Music/writejson?id=@song.MusicId">@song.Music_name</a></td>
+                        <td>@song.Music_singer</td>
+                        <td><a href="album?id=@song.Music_albumid">@song.Music_specialName</a></td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+}
+

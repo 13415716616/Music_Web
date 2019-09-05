@@ -1,0 +1,279 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    var music = ViewData["Music"] as IList<Music_web.Music_API.Music_info>;
+    var islogin = ViewBag.Login;
+    var music_l = ViewBag.music_l as IList<Music_web.Music_API.Music_info>;
+    var music_c = ViewBag.music_c as IList<Music_web.Music_API.Music_info>;
+    var music_g = ViewBag.music_g as IList<Music_web.Music_API.Music_info>;
+    var music_y = ViewBag.music_y as IList<Music_web.Music_API.Music_info>;
+    var music_w = ViewBag.music_w as IList<Music_web.Music_API.Music_info>;
+    var music_m = ViewBag.music_m as IList<Music_web.Music_API.Music_info>;
+    int i = 1;int k = 1;int j = 1;int l = 1;int m = 1;
+}
+@model Music
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="~/css/home-style.css">
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/css/"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/" type="text/css">
+    <script>
+        function da(photo_1,photo_2){
+            var a=document.getElementById(photo_1);
+            var b=document.getElementById(photo_2);
+            a.style.webkitAnimation="da 1s forwards";
+            b.style.display="block";
+        }
+        function xiao(photo_1,photo_2){
+            var a=document.getElementById(photo_1);
+            var b=document.getElementById(photo_2);
+            a.style.webkitAnimation="xiao 1s forwards";
+            b.style.display="none";
+        }
+    </script>
+</head>
+<body>
+    <div @*class="B"*@>
+        <div class="b">
+            <div class="c11">
+                <h3 class="c111">
+                    歌单推荐
+                </h3>
+            </div>               
+            <div class="b3">
+                <ul class="palylist__list slide__list">
+                    <li class="palylist__item slide__item">
+                        <div class="palylist__item_box">
+                            <div onmousemove="da('photo_a_0','photo_b_0')" onmouseout="xiao('photo_a_0','photo_b_0')" class="palylist__cover">
+                                <a href="javascript:void(0)">
+                                    <img id="photo_a_0" onmousemove="da('photo_a_0','photo_b_0')" onmouseout="xiao('photo_a_0','photo_b_0')" src="http://p4.music.126.net/vkoQqphGwk6TyRFai3ZBdw==/3238061743857732.jpg" alt="">
+                                    <img id="photo_b_0" onmousemove="da('photo_a_0','photo_b_0')" onmouseout="xiao('photo_a_0','photo_b_0')" src="images/play.png" alt="">
+
+                                </a>
+                            </div>
+                            <h4 class="palylist__title">
+                                <span class="palylist__title_txt"><a href="/Music/album?id=3054014">洛天依作品集</a></span>
+                            </h4>
+                            <div class="palylist__other">
+                                播放量：2.8万
+                            </div>
+                        </div>
+                    </li>
+                    <li class="palylist__item slide__item">
+                        <div class="palylist__item_box">
+                            <div onmousemove="da('photo_a','photo_b')" onmouseout="xiao('photo_a','photo_b')" class="palylist__cover">
+                                <a href="javascript:void(0)">
+                                    <img id="photo_a" onmousemove="da('photo_a','photo_b')" onmouseout="xiao('photo_a','photo_b')" src="http://p3.music.126.net/aMZS6jTuJg3J_eaykzUP7w==/2931298000136969.jpg" alt="">
+                                    <img id="photo_b" onmousemove="da('photo_a','photo_b')" onmouseout="xiao('photo_a','photo_b')" src="images/play.png" alt="">
+
+                                </a>
+                            </div>
+                            <h4 class="palylist__title">
+                                <span class="palylist__title_txt"><a href="/Music/album?id=34527511">热门华语264</a></span>
+                            </h4>
+                            <div class="palylist__other">
+                                播放量：4.0万
+                            </div>
+
+                        </div>
+                    </li>
+                    <li class="palylist__item slide__item">
+                        <div class="palylist__item_box">
+                            <div onmousemove="da('photo_a_1','photo_b_1')" onmouseout="xiao('photo_a_1','photo_b_1')" class="palylist__cover">
+                                <a href="https://y.qq.com/n/yqq/playlist/4242003865.html/">
+                                    <img id="photo_a_1" onmousemove="da('photo_a_1','photo_b_1')" onmouseout="xiao('photo_a_1','photo_b_1')" src="http://p4.music.126.net/naihNDWAJXSxy7UE3XVKEg==/17692241602844445.jpg" alt="">
+                                    <img id="photo_b_1" onmousemove="da('photo_a_1','photo_b_1')" onmouseout="xiao('photo_a_1','photo_b_1')" src="images/play.png" alt="">
+
+                                </a>
+                            </div>
+                            <h4 class="palylist__title">
+                                <span class="palylist__title_txt"><a href="/Music/album?id=34779079">中华少女Project (Deluxe Edition)</a></span>
+                            </h4>
+                            <div class="palylist__other">
+                                播放量：104.7万
+                            </div>
+
+                        </div>
+                    </li>
+                    <li class="palylist__item slide__item">
+                        <div class="palylist__item_box">
+                            <div onmousemove="da('photo_a_2','photo_b_2')" onmouseout="xiao('photo_a_2','photo_b_2')" class="palylist__cover">
+                                <a href="javascript:void(0)">
+                                    <img id="photo_a_2" onmousemove="da('photo_a_2','photo_b_2')" onmouseout="xiao('photo_a_2','photo_b_2')" src="http://p4.music.126.net/L8SZ53Nf5le4JDvG6qVB6g==/1424967072083597.jpg" alt="">
+                                    <img id="photo_b_2" onmousemove="da('photo_a_2','photo_b_2')" onmouseout="xiao('photo_a_2','photo_b_2')" src="images/play.png" alt="">
+
+                                </a>
+                            </div>
+                            <h4 class="palylist__title">
+                                <span class="palylist__title_txt"><a href="/Music/album?id=34527511">从小到大</a></span>
+                            </h4>
+                            <div class="palylist__other">
+                                播放量：51.6万
+                            </div>
+
+                        </div>
+                    </li>
+                    <li class="palylist__item slide__item">
+                        <div class="palylist__item_box">
+                            <div onmousemove="da('photo_a_3','photo_b_3')" onmouseout="xiao('photo_a_3','photo_b_3')" class="palylist__cover">
+                                <a href="javascript:void(0)">
+                                    <img id="photo_a_3" onmousemove="da('photo_a_3','photo_b_3')" onmouseout="xiao('photo_a_3','photo_b_3')" src="http://p4.music.126.net/rTqQnuui6ZWX4SC3M3YVJA==/109951163078956121.jpg" alt="">
+                                    <img id="photo_b_3" onmousemove="da('photo_a_3','photo_b_3')" onmouseout="xiao('photo_a_3','photo_b_3')" src="images/play.png" alt="">
+
+                                </a>
+                            </div>
+                            <h4 class="palylist__title">
+                                <span class="palylist__title_txt"><a href="/Music/album?id=36913180">这个世界很民谣</a></span>
+                            </h4>
+                            <div class="palylist__other">
+                                播放量：43.2万
+                            </div>
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div @*class="C"*@>
+        <div class="c">
+            <div class="c11">
+                <h2 class="c111">精彩推荐</h2>
+            </div>
+            <div class="c12">
+                <div class="c121">
+                    <a href="#"><img src="~/img/am6.jpg" alt=""></a>
+                </div>
+                <div class="c122">
+                    <a href="#"><img src="~/img/am7.jpg" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div @*class="D"*@>
+        <div class="d">
+            <h2 class="d1">新碟首发</h2>           
+            <div class="d3">
+                <ul class="d31">
+                    @foreach (var song in music_l)
+                    { <li class="d311">
+                        <div class="">
+                            <div class="z1">
+                                <div onmousemove="da('photo_a_4','photo_b_4')" onmouseout="xiao('photo_a_4','photo_b_4')" class="palylist__cover">
+                                    <a href="https://y.qq.com/n/yqq/album/001F3wHD1gp0IK.html/">
+                                        <img id="photo_a_4" onmousemove="da('photo_a_4','photo_b_4')" onmouseout="xiao('photo_a_4','photo_b_4')" src=@song.music_picurl alt="">
+                                        <img id="photo_b_4" onmousemove="da('photo_a_4','photo_b_4')" onmouseout="xiao('photo_a_4','photo_b_4')" src="images/play.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <h4 class="z3">
+                                <a href="/Music/writejson?id=@song.id">@song.music_name</a>
+                            </h4>
+                            <div class="z2"><a href="#">胡夏</a></div>
+                        </div>
+                    </li>
+                    }               
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div @*class="E"*@>
+        <div class="e">
+            <div class="e1">
+                <h2>排行榜</h2>
+            </div>
+            <div class="e2">
+                <ul class="e21">
+                    <li class="z11">
+                        <div class="z111">
+                            <h4>巅峰榜</h4>
+                            <h3><a href="#">古风歌曲</a></h3>
+                            <div class="e211">
+                                @foreach (var song in music_g)
+                                {
+                                 <div>
+                                     <p>
+                                         @i
+                                         <a href="/Music/writejson?id=@song.id">.@song.music_name</a><br />
+                                        <font size="-1">@song.music_alname</font>
+                                     </p>
+                                </div>i++;
+                                }
+                            </div>
+                        </div>
+                    </li>
+                    <li class="z12">
+                        <div class="z111">
+                            <h4>巅峰榜</h4>
+                            <h3><a href="#">纯音乐</a></h3>
+                            <div class="e211">
+                                @foreach (var song in music_c)
+                                {
+                                <div>
+                                    @j
+                                    <a href="/Music/writejson?id=@song.id">.@song.music_name</a><br />
+                                    <font size="-1">@song.music_alname</font><br />
+                                </div>
+                                    j++;
+                                }
+                            </div>
+                        </div>
+                    </li>
+                    <li class="z13">
+                        <div class="z111">
+                            <h4>巅峰榜</h4>
+                            <h3><a href="#">新歌</a></h3>
+                            <div class="e211">
+                                @foreach (var song in music_w)
+                                {
+                                    <div class="e211a">
+                                        <div class="e211a_1">@k</div>
+                                        <div class="e211a_2"><a href="/Music/writejson?id=@song.id">@song.music_name</a></div>
+                                        <div class="e211a_3"><a href="#">@song.music_alname</a></div>
+                                    </div>
+                                }
+                                </div>
+                        </div>
+                    </li>
+                    <li class="z14">
+                        <div class="z111">
+                            <h4>巅峰榜</h4>
+                            <h3><a href="#">欧美</a></h3>
+                            <div class="e211">
+                                @foreach (var song in music_y)
+                                {
+                                    <div class="e211a">
+                                        <div class="e211a_1">@l</div>
+                                        <div class="e211a_2"><a href="/Music/writejson?id=@song.id">@song.music_name</a></div>
+                                        <div class="e211a_3"><a href="#">@song.music_alname</a></div>
+                                    </div>
+                                }
+                                </div>
+                        </div>
+                    </li>
+                    <li class="z15">
+                        <div class="z111">
+                            <h4>巅峰榜</h4>
+                            <h3><a href="#">韩国</a></h3>
+                            <div class="e211">
+                                @foreach (var song in music_y)
+                                {    
+                                    <div class="e211a">
+                                    <div class="e211a_1">@m</div>
+                                    <a href="/Music/writejson?id=@song.id">@song.music_name</a>
+                                     <a href="#">@song.music_alname</a>
+                                    </div>m++;
+                                }
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+*{margin: 0px auto;padding:0px;font-family:"微软雅黑";-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;moz-user-select: -moz-none;
+-moz-user-select: none;
+-o-user-select:none;
+-khtml-user-select:none;
+-webkit-user-select:none;
+-ms-user-select:none;
+user-select:none;}
+body{min-height:600px;overflow: hidden;min-width: 1200px;position: relative;}
+a{text-decoration: none;outline: none;}
+a:focus{outline: none;}
+li{list-style-type: none;}
+/*解决input按钮在Iphone上样式不一样的问题*/
+input[type=button], input[type=submit], input[type=file], button{cursor: pointer; -webkit-appearance: none;}
+.blur{ text-align: center; height: 100%; width: 100%; background-repeat: no-repeat; background-position: center; background-size: cover; -webkit-filter: blur(14px); -moz-filter: blur(14px); -o-filter: blur(14px); -ms-filter: blur(14px); filter: blur(14px); position: absolute; z-index: -2; top: 0; left: 0; transition: 0.2s;}
+#Mask{position: absolute;z-index: -1;width: 100%;height: 100%;background: rgba(0,0,0,0.7);}
+header,article,footer{padding:0 8% 0 8%;}
+header{height: 12%;width: 100%;position: relative;text-align: center;}
+header ul{position: absolute;bottom: 0;height: 40px;padding-left: 20px;}
+header ul li{height:100%;width: 142px;float: left;margin-right: 40px;border: 1px solid #AD986D;border-radius: 3px;cursor: pointer;line-height: 38px;font-size: 20px;color: #AD986D;text-align: center;transition: 0.3s;}
+header ul li:hover{background: #AD986D;color: black;}
+header ul li i{margin-right: 16px;}
+article{height: 74%;}
+.Text_left,.Text_right{float: left;height: 100%;color: #AD986D;height: 100%;}
+.Text_left{width: 70%;padding-top: 2%;}
+.left_title{height: 10%;padding-left: 20px;}
+.left_song,.left_singer,.left_time{float: left;height: 100%;padding-left: 34px;text-align: left;font-weight: 800;font-size: 18px;}
+.left_song{width: 56%;}
+.left_singer{width: 26%;}
+.left_time{width: 18%;}
+#menu{width: 100%;height: 90%;padding-left: 20px;overflow: hidden;position: relative;}
+.menu ul{position: relative;}
+.scroll_bar{width: 10px;border-radius: 10px;background: rgba(103,88,62,1);height: 100%;position: absolute;right: 0;top: 0;display: block;}
+.bar{width: 100%;height: 100px;background: rgba(173,152,109,0.6);border-radius: 10px;display: block;position: absolute;top: 0;left: 0;}
+.menu li{height: 52px;position: relative;border-left: 1px solid #AD986D;}
+.menu li:hover{background: rgba(198,198,198,0.2);}
+.menu li .circle{border: 1px solid #AD986D;border-radius: 50%;width: 18px;height: 18px;position: absolute;top: 50%;margin-top: -9px;left: -9px;transition: 0.3s;background: rgba(85,72,44,1);z-index: 88;}
+.menu li div.circleclick{background: #AD986D;width: 22px;height: 22px;left: -11px;margin-top:-11px;}
+.menu li span{float: left;display: block;overflow:hidden;height: 100%;line-height: 52px;padding-left: 34px;}
+.menu li span:nth-child(2){width: 56%;}
+.menu li span:nth-child(3){width: 26%;}
+.menu li span:nth-child(4){width: 18%;}
+.Text_right{width: 30%;height: 100%;}
+.box_Lyric{overflow: hidden;margin-top: 80px;position: relative;transition: 0.3s;}
+.Lyric{width: 100%;top: 0;position: absolute;z-index: 888;transition: 0.3s;font-size: 15px;}
+.Lyric li{text-align: center;height: 32px;width: 100%;height: 32px;color: #8c7b58;transition: 0.3s;}
+.Lyric li.Highlight{color: #C4AD79;}
+.Text_right img{position: absolute;z-index: 2;width: 200px;height: 200px;left:-20px;top: -20px;border-radius: 2px;box-shadow: 0px 0px 2px 0px #AD986D; transition: box-shadow 0.3s;-moz-transition: box-shadow 0.3s;-webkit-transition: box-shadow 0.3s;}
+.right_frame{position: relative;width: 200px;height: 200px;border: 2px solid #AD986D;border-radius: 2px;}
+.Text_left:after,.Text_right:after,article:after,.left_song:after,.left_singer:after,.left_time:after,.menu li span:after{clear: both;}
+footer{height: 14%;min-height: 64px;position: absolute;width: 100%;bottom: 0;}
+.footer_left,.footer_center,.footer_right{height: 100%;float: left;color: #AD986D;}
+footer i{cursor: pointer;}
+.footer_left{font-size: 26px;text-align: left;width: 21%;line-height: 131px;}
+.footer_left i{width: 26px;height: 26px;}
+.footer_left i:nth-child(1){margin-left: 0;}
+.footer_left i,.footer_right i{margin: 0 22px;}
+.footer_right i:nth-child(2){margin-right: 0;}
+.footer_center{width: 50%;}
+.center_ul{height: 100%;}
+.center_ul li{width: 100%;height: 50%;position: relative;}
+.ul_information span{position: absolute;bottom: 4px;font-size: 14px;}
+.ul_Progress{position: relative;}
+.information_time{right: 0;}
+.li_slider{background: #705E38;height: 2px;position: absolute;border-radius: 2px;top: 10px;left: 0;width:100%;z-index: 10;cursor: pointer;}
+.li_Percentage{width: 0%;height: 2px;position: absolute;z-index: 12;left: 0;cursor: pointer;background: #AD986D;top: 10px;}
+.spot{width: 10px;height: 10px;border-radius: 50%;background: #AD986D;position: absolute;right: 0;top: -4px;}
+.footer_right{line-height: 131px;width: 29%;font-size: 26px;padding-right: 9%;text-align: right;position: relative;}
+.footer_right i{width: 26px;height: 26px;text-align: left;}
+.footer_right i:nth-child(2){margin-right: 0px;}
+.volume_box{position: absolute;right: 8%;top: 50%;height: 2px;background: #705E38;width: 20%;cursor: pointer;}
+.volume_slider{position: absolute;width:50%;height: 2px;left: 0;background: #AD986D;cursor: pointer;}
+.menu_animation{position: absolute;width: 14px;height: 14px;top: 50%;margin-top: -7px;left: 14px;transform: rotate(180deg);}
+.menu_animation em{background: #C4AD79;width: 2px;margin: 1px;height: 100%;float: left;}
+.menu_animation em:after{clear: both;}
+.anim_1{animation: waves 0.3s 0.2s ease alternate infinite;-webkit-animation: waves 0.3s 0.2s ease alternate infinite;}
+.anim_2{animation: waves 0.3s 0.1s ease alternate infinite;-webkit-animation: waves 0.3s 0.1s ease alternate infinite;}
+.anim_3{animation: waves 0.3s ease alternate infinite;-webkit-animation: waves 0.3s ease alternate infinite;}
+.Oh_dear{display: block;color: #C4AD79;font-size: 30px;height: 42px;width: 272px;margin-top: 200px;}
+@-webkit-keyframes waves{0%{height: 100%;} 100%{height: 0%;}}
+@keyframes waves{0%{height: 100%;} 100%{height: 0%;}}

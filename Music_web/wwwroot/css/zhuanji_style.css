@@ -1,0 +1,590 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    height: 70px;
+    width: 800px;
+    margin: 100px auto 0 auto;
+}
+.parent {
+    position: relative;
+}
+.search {
+    width: 350px;
+    height: 60px;
+    border-radius: 18px;
+    outline: none;
+    border: 1px solid #ccc;
+    padding-left: 20px;
+    position: absolute;
+}
+.btn {
+    height: 35px;
+    width: 35px;
+    position: absolute;
+  background-color:aliceblue;
+    top: 6px;
+    left: 485px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.topNav{
+    width: 100%;
+    height: 92px;
+}
+.topCenter{
+    width: auto;
+    height: 90px;
+}
+.under{
+    width: 1200px;
+    height: 51px;
+    margin-top: -20px;
+}
+.logo{
+    width: 170px;
+    height: 46px;
+    float: left;
+    margin-top: 22px;
+}
+.top1{
+    width:436px;
+    height: 90px;
+    float: left;
+    padding-left: 20px;
+}
+.top2 {
+    width: 94px;
+    height: 90px;
+    background-color:#31c27c;
+    float: left;
+}
+.top2 a{
+    width: 94px;
+    height: 90px;
+    line-height: 90px;
+    float: left;
+    text-align: center;
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+}
+.top1 nav a{
+    line-height: 90px;
+    float: left;
+    color: black;
+    text-align: center;
+    font-size: 18px;
+    text-decoration: none;
+    padding-left:  20px;
+}
+.top1 nav a:hover{
+    /**/
+    color:rgb(49, 194, 124);
+}
+.top3{
+    width: 230px;
+    height: 36px;
+    float: left;
+    margin-top: 26px;
+    /*           */
+    border: 1px solid #c9c9c9;
+}
+.search1{
+    width: 174px;
+    height: 36px;
+    border:0 none;
+    outline:none;
+    /*内边距:文字距离边内边框的距离*/
+    padding: 0px 3px 0px 20px;/*上右下左*/
+    float: left;
+}
+.search2{
+    width: 54px;
+    height: 36px;
+    border:0 none;
+    font-size: 18px;
+    float: right;
+    outline:none;
+}
+.top4{
+    width: 290px;
+    height: 90px;
+    line-height: 90px;
+    float: right;
+}
+.nav1{
+    font-size: 16px;
+    text-decoration: none;
+    color: black;
+}
+.nav2{
+    margin:0px 10px 0px 20px ;
+    padding: 12px;
+    color: white;
+    font-size: 14px;
+    background-color:rgb(49, 194, 124);
+    text-decoration: none;
+}
+.nav3{
+    padding: 12px;
+    border: 1px solid #c9c9c9;
+    font-size: 13px;
+    text-decoration: none;
+    color: black;
+}
+.nav1:hover{
+    color:rgb(49, 194, 124);
+    text-decoration: none;
+}
+.nav2:hover{
+    background-color: rgb(42, 168, 107);
+    text-decoration: none;
+}
+.nav3:hover{
+    background-color: #e9e9e9;
+    text-decoration: none;
+}
+.under nav{
+    padding-left: 228px;
+    margin-top: -10px;
+}
+.under nav a{
+    font-size: 15px;
+    text-decoration: none;
+    line-height: 51px;
+    padding-right:28px;
+    color:black;
+}
+.under nav a:hover{
+    color:rgb(49, 194, 124);
+}
+.under1{
+    color: rgb(49, 194, 124)!important;
+}
+.hzy{
+    width: 100%;
+    height: 20px;
+}
+.musicNav{
+    width: 1590px;
+    height: 436px;
+    margin-top: 2px;
+}
+.musicNavCenter{
+    width: 1200px;
+    height: 436px;
+    cursor: pointer
+}
+.ImgRun{
+    width: 1200px;
+    height: 436px;
+}
+.NewAlbum{
+    width: 1590px;
+    height: 431px;
+}
+.hCenter{
+    width: 1200px;
+    height: 431px;
+}
+.upside{
+    width: 1200px;
+    height: 60px;
+}
+.upsideTitle{
+    float: left;
+    font-size: 24px;
+    /*字体样式加粗为多少*/
+    font-weight: 400;
+    /*垂直居中*/
+    line-height: 30px;
+}
+.hMiddle{
+    width: 1200px;
+    height: 321px;
+    position: relative;
+}
+.albumPhoto{
+    width: 20%;
+    height: 311px;
+    cursor: pointer!important;
+    position: relative;
+    float: left;
+}
+.albumPhoto img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-right: 20px;
+    cursor: pointer!important;
+}
+.albumPhoto img:hover{
+    /*渐变效果：在0.5S内向上移五个像素*/
+    -webkit-transition:margin-top 0.5s;
+    /**/
+    margin-top: -5px;
+    /*阴影:水平阴影  垂直阴影  模糊距离  阴影颜色*/
+    box-shadow: 0px 10px 30px aqua;
+}
+.albumPhoto2 img:hover {
+    /*渐变效果：在0.5S内向上移五个像素*/
+    -webkit-transition: margin-top 0.5s;
+    margin-top: -5px;
+    /*阴影:水平阴影  垂直阴影  模糊距离  阴影颜色*/
+    box-shadow: 0px 10px 30px dodgerblue;
+}
+.albumPhoto3 img:hover {
+    /*渐变效果：在0.5S内向上移五个像素*/
+    -webkit-transition: margin-top 0.5s;
+    margin-top: -5px;
+    /*阴影:水平阴影  垂直阴影  模糊距离  阴影颜色*/
+    box-shadow: 0px 10px 30px darkcyan;
+}
+.albumPhoto4 img:hover {
+    /*渐变效果：在0.5S内向上移五个像素*/
+    -webkit-transition: margin-top 0.5s;
+    margin-top: -5px;
+    /*阴影:水平阴影  垂直阴影  模糊距离  阴影颜色*/
+    box-shadow: 0px 10px 30px lightsalmon;
+}
+.albumPhoto5 img:hover {
+    /*渐变效果：在0.5S内向上移五个像素*/
+    -webkit-transition: margin-top 0.5s;
+    margin-top: -5px;
+    /*阴影:水平阴影  垂直阴影  模糊距离  阴影颜色*/
+    box-shadow: 0px 10px 30px yellow;
+}
+.albumNews{
+    width: 20%;
+    height: 90px;
+    left: 0;
+    top: 230px;
+    cursor: pointer!important;
+    position: absolute;
+}
+.albumPhoto2{
+    width: 20%;
+    height: 311px;
+    cursor: pointer!important;
+    position: relative;
+    float: left;
+}.albumNews2{
+     width: 20%;
+     height: 90px;
+     left: 240px;
+     top: 230px;
+     cursor: pointer!important;
+     position: absolute;
+ }
+ .Search{
+     width: 80px;
+     height: 20px;
+     line-height: 10px;/*垂直居中*/
+     margin:-30px 20px 10px 0px;/*上右下左  外边框距离*/
+     cursor: pointer!important;
+     float: right;
+     background-color: #fff;
+     color:#000;
+     border: 1px solid gray;/*粗细为一厘米的实线边框*/
+     padding:5px 10px;/*内边距，文字力内边框距离*/
+ }
+.albumPhoto3{
+    width: 20%;
+    height: 311px;
+    cursor: pointer;
+    position: relative;
+    float: left;
+}.albumNews3{
+     width: 20%;
+     height: 90px;
+     left: 480px;
+     top: 230px;
+     cursor: pointer!important;
+     position: absolute;
+ }
+.albumPhoto4{
+    width: 20%;
+    height: 311px;
+    position: relative;
+    float: left;
+    cursor: pointer!important;
+}.albumNews4{
+     width: 20%;
+     height: 90px;
+     left: 720px;
+     top: 230px;
+     cursor: pointer!important;
+     position: absolute;
+ }
+.albumPhoto5{
+    width: 20%;
+    height: 311px;
+    cursor: pointer;
+    position: relative;
+    float: left;
+    cursor: pointer!important;
+}.albumNews5{
+     width: 20%;
+     height: 90px;
+     left: 960px;
+     top: 230px;
+     cursor: pointer!important;
+     position: absolute;
+ }
+ .HotSale{
+     width: 1590px;
+     height: 431px;
+ }
+.Musician{
+    width: 1590px;
+    height: 431px;
+}
+.NewVoice{
+    width: 1590px;
+    height: 431px;
+}
+.Exclusive{
+    width: 1590px;
+    height: 431px;
+}
+.Western{
+    width: 1590px;
+    height: 431px;
+}
+.Gt{
+    width: 1590px;
+    height: 431px;
+}
+.Ysj{
+    width: 1590px;
+    height: 431px;
+}
+
+
+
+
+
+
+.footer{
+    width: 1590px;
+    height: 589px;
+}
+i{
+    font-style: italic;
+}
+.section_inner {
+    max-width: 1200px;
+    position: relative;
+
+
+}
+.footer{
+    color: #000;
+    background-color: #333;
+    clear: both;
+}
+/*.main::after,.section_inner::after{
+    content:" ";
+    display: block;
+    clear: both;
+}*/
+.footer a{
+    color: #999;
+    text-decoration: none;
+}
+.footer_info{
+    overflow: hidden;
+    border-bottom: 1px solid #353535;
+    position: relative;
+    padding-bottom: 45px;
+    width: 1200px;
+    height: 457px;
+}
+.footer_download{
+    position: absolute;
+    top: 0;
+    left: 10px;
+    width: 400px;
+    height: 229px;
+    float: left;
+}
+.footer_product {
+    position: absolute;
+    top: 0;
+    left: 476px;
+    width: 304px;
+    height: 300px;
+    float: left;
+}
+.footer_link{
+    float: right;
+    padding-bottom: 57px;
+    width: 300px;
+    height: 337px;
+}
+.footer_platform{
+    /* width: 1190px;
+     height: 148px;
+     !*background-color: #9d9d9d;*!
+     float:left;*/
+    margin: 230px 0 0 10px;
+}
+.footer_copyright{
+    width: 1200px;
+    height: 132px;
+    text-align: center;
+    line-height: 28px;
+    font-size: 12px;
+}
+h3{
+    display: block;
+    font-size: 1.17cm;
+    -webkit-margin-before:1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    font-weight: bold;
+}
+.footer_tit{
+    font-size: 15px;
+    font-weight: 400;
+    padding: 80px 0 46px;
+}
+.footer_download_list{
+    margin-left: -29px;
+}
+.footer_download_list_item {
+    float: left;
+    text-align: center;
+    position: relative;
+}
+.footer ul li a:hover{
+    color: #31C37C;
+    text-decoration: none;
+}
+.footer h3{
+    color: #999;
+}
+.footer p a{
+    color: #999;
+    text-decoration: none;
+}
+.footer p a:hover{
+    color: #31C37C;
+}
+li{
+    list-style: none;
+    display: list-item;
+}
+li a{
+    text-decoration: none;
+}
+.icon_txt{
+    font: 0/0 a;
+}
+.icon_qm_pc {
+    width: 37px;
+    background-position: -2px 0;
+}
+.icon_qm_pc:hover {
+    background-position: -2px -50px;
+}
+.icon_qm_mac:hover{
+    background-position: -92px -50px;
+}
+.icon_qm_iphone:hover{
+    background-position: -279px -50px;
+}
+.icon_qm_android:hover{
+    background-position: -190px -50px;
+}
+.icon_qm_kg:hover{
+    background-position: -370px -50px;
+}
+.icon_qm_ss:hover{
+    background-position: -463px -50px;
+}
+.icon_qm_qp:hover{
+    background-position: -563px -50px;/*-49 -50*/
+}
+.icon_qm_mac{
+    width: 46px;
+    background-position: -92px 0;
+}
+.icon_qm_android {
+    width: 37px;
+    background-position: -190px 0;
+}
+.icon_qm_iphone {
+    width: 34px;
+    background-position: -279px 0;
+}
+.icon_qm_android,.icon_qm_iphone,.icon_qm_mac,.icon_qm_pc,.icon_qm_kg,.icon_qm_qp,.icon_qm_ss{
+    display: block;
+    margin: 0 29px 12px;
+    width: 48px;
+    height: 48px;
+    background-image:url("../images/footer.png");
+}
+/*.icon_qm_pc:hover::before{
+    content: " ";
+    position: absolute;
+    z-index: 1;
+    width: 48px;
+    height: 48px;
+    left: 28px;
+    background-image: url("../images/footer.png");
+    background-position: 0 -50px;
+}*/
+.footer_product_list {
+    margin-left: -25px;
+
+}
+.footer_product_list__item--pic {
+    text-align: center;
+    position: relative;
+    margin-right: 0;
+    text-indent: 0;
+}
+.footer_product_list__item{
+    float: left;
+    margin-bottom: 18px;
+    text-indent: 25px;
+    margin-right:5px;
+}
+
+.icon_qm_kg{
+    width: 41px;
+    background-position: -370px 0;
+}
+.icon_qm_ss{
+    width: 37px;
+    background-position: -463px 0;
+}
+.icon_qm_qp{
+    margin-right: 23px;
+    width: 40px;
+    background-position: -563px 0;
+}
+.footer_link_list__item{
+    float: left;
+    min-width: 100px;
+    margin-bottom: 12px;
+}
+
+.footer_platform_list{
+    margin-left: -25px;
+}
+.footer_platform_list__item{
+    float: left;
+    min-width: 100px;
+    margin: 0 5px 12px 0;
+    text-indent: 25px;
+}
+.F{
+    width: 1910px;
+    height: 589px;
+}

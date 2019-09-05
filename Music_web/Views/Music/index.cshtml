@@ -1,0 +1,21 @@
+﻿@{
+    Layout = null;
+}
+
+@model Music
+
+<html>
+<head>
+</head>
+<body>
+    <form asp-controller="Music" asp-action="Index" enctype="multipart/form-data">
+        <h3>音乐名：</h3><input type="text" asp-for="Music_name" /><br />
+        <h3>演唱者</h3><input type="text" asp-for="Music_singer" /><br />
+        <h3>上传文件</h3>     
+        <input type="file" name="MusicFile" asp-for="MusicFile" multiple />
+        <input type="submit" />
+    </form>    
+    @ViewBag.Message
+</body>
+</html>
+

@@ -1,0 +1,69 @@
+﻿@{
+    var music = ViewData["Music"] as IList<Music_web.Music_API.Music_info>;
+    var islogin = ViewBag.Login;
+    var i = 2;
+}
+@model Music
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>搜索</title>
+    <link rel="stylesheet" href="~/css/zhuanji_style.css" />
+</head>
+<body>
+    <!--导航栏  开始-->
+    <div style="background-image: url('/img/Search_back .jpg');background-repeat:inherit; height: 300px;width: 100%;margin-top: 5px">
+        <div class="container1">
+            <form asp-action="Search" asp-controller="Music" class="parent" style="position: absolute;margin-top: 180px;margin-left: 30%">
+                <input type="text"style="width: 350px; height: 50px; border-radius: 18px; outline: none; border: 1px solid #ccc;" placeholder="搜索" name="text">
+                <input type="submit"  class="btn" style="float:left;margin-left:0;position:absolute; background-color:aliceblue;height:40px;width:60px" value="确定">
+            </form>
+        </div>
+    </div>
+    @if (music != null)
+    {
+        <table class="table" style="width: 90%;margin-left:5%">
+            <thead style="size: 10ch">
+                <th>歌曲名</th>
+                <th>歌手</th>
+                <th>专辑</th>
+                @*<th>来源</th>*@
+                <th>收藏</th>
+            </thead>
+                <tbody style="opacity:0.5">
+
+                    @foreach (var song in music)
+                    {
+                        @if (i % 2 == 0)
+                        {
+                            <tr style="background-color:#f0fcff;">
+                                <td><a href="writejson?id=@song.id">@song.music_name</a></td>
+                                <td >@song.music_alname</td>
+                                <td><a href="album?id=@song.albumid">@song.album</a></td>
+                                @*<td>111</td>*@
+                                <td>
+                                    <a href="/User/shouchang?id=@song.id">收藏歌曲</a>
+                                </td>
+                            </tr>
+                        }
+                        else
+                        {
+                        <tr>
+                            <td><a href="writejson?id=@song.id">@song.music_name</a></td>
+                            <td>@song.music_alname</td>
+                            <td><a href="album?id=@song.albumid">@song.album</a></td>
+                            @*<td>111</td>*@
+                            <td>
+                                <a href="/User/shouchang?id=@song.id">收藏歌曲</a>
+                            </td>
+                        </tr>
+                        }
+                        i++;
+                    }
+                </tbody>
+    </table>
+    }
+</body>
+</html>

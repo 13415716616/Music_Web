@@ -1,0 +1,78 @@
+﻿@model Music_web.Models.Music
+
+@{
+    ViewData["Title"] = "Upload_Music";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    
+}
+
+<h1>Upload_Music</h1>
+
+<h4>Music</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Upload_Music">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="MusicId" />
+            <div class="form-group">
+                <label asp-for="Music_name" class="control-label"></label>
+                <input asp-for="Music_name" class="form-control" />
+                <span asp-validation-for="Music_name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Music_singer" class="control-label"></label>
+                <input asp-for="Music_singer" class="form-control" />
+                <span asp-validation-for="Music_singer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Music_specialName" class="control-label"></label>
+                <input asp-for="Music_specialName" class="form-control" />
+                <span asp-validation-for="Music_specialName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Music_size" class="control-label"></label>
+                <input asp-for="Music_size" class="form-control" />
+                <span asp-validation-for="Music_size" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Music_Url" class="control-label"></label>
+                <input asp-for="Music_Url" class="form-control" />
+                <span asp-validation-for="Music_Url" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Music_format" class="control-label"></label>
+                <input asp-for="Music_format" class="form-control" />
+                <span asp-validation-for="Music_format" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Music_hits" class="control-label"></label>
+                <input asp-for="Music_hits" class="form-control" />
+                <span asp-validation-for="Music_hits" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Music_download" class="control-label"></label>
+                <input asp-for="Music_download" class="form-control" />
+                <span asp-validation-for="Music_download" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Music_time" class="control-label"></label>
+                <input asp-for="Music_time" class="form-control" />
+                <span asp-validation-for="Music_time" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Music_type" class="control-label"></label>
+                <input asp-for="Music_type" class="form-control" />
+                <span asp-validation-for="Music_type" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

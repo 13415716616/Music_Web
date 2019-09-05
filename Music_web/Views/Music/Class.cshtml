@@ -1,0 +1,64 @@
+﻿
+@{
+    ViewData["Title"] = "Class";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var music = ViewData["Music"] as IList<Music_web.Music_API.Music_info>;
+}
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>QQ音乐专辑</title>  
+    <style>
+.box{
+    width: 100%;
+    height: auto;
+}
+.box1{
+    width: 200px;
+    height: auto;
+}
+.box2{
+    width: 1200px;
+    height: 66px;
+}
+.Photo{
+    width: 20%;
+    height: 224px;
+    float: left!important;
+}
+.fg{
+    width: 100%;
+    height: 20px;
+    position: relative;
+}
+    </style>
+</head>
+<body>
+    <div style="height:50px;width:100%;background-color:#f3f3f3;margin-top:5px">
+        <p style="font-size:20px;margin-top:10px;position:absolute;margin-left:3%">
+            <span>分类：</span>
+            <span><a href="/Music/Class?classname='流行歌曲'" style="opacity:0.5">&nbsp;</a></span>
+            <span><a href="/Music/Class?classname='古风歌曲'" style="opacity:0.5">&nbsp;古风</a></span>
+            <span><a href="/Music/Class?classname='纯音乐'" style="opacity:0.5">&nbsp;纯音乐</a></span>
+            <span><a href="/Music/Class?classname='民谣歌曲'" style="opacity:0.5">&nbsp;民谣</a></span>
+            <span><a href="/Music/Class?classname='唯美歌曲'" style="opacity:0.5">&nbsp;唯美</a></span>
+            <span><a href="/Music/Class?classname='电子歌曲'" style="opacity:0.5">&nbsp;电子</a></span>
+            <span><a href="/Music/Class?classname='欢乐歌曲'" style="opacity:0.5">&nbsp;欢乐</a></span>
+            <span><a href="/Music/Class?classname='儿歌歌曲'" style="opacity:0.5">&nbsp;儿歌</a></span>
+        </p>
+    </div>
+    <font face="楷体" size="6">分类：</font>
+    <div class="box" style="margin-top:10px">
+        @foreach (var song in music)
+        {
+            <div class="Photo" style="margin-top:30px;">
+                <img src="@song.music_picurl" width="200px" height="200px" id="tu1" onmousemove="da('tu1')" onmouseout="xiao('tu1')" alt="" /><br />
+               <a href="@song.musci_url"> @song.music_name;<br /></a>
+                @song.music_alname
+            </div>
+        }
+    </div>
+</body>
+</html>
